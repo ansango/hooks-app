@@ -14,7 +14,7 @@ export const SimpleForm = () => {
 
   useEffect(() => {
     log("SimpleForm", formState);
-  }, [email]);
+  }, [formState, email]);
 
   const handleInputChange = ({ target }) => {
     setFormState({ ...formState, [target.name]: [target.value] });
