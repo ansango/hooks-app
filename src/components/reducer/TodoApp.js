@@ -34,6 +34,11 @@ export const TodoApp = () => {
     }
   };
 
+  const handleDeleteTodo = (todoId) => {
+    const action = { type: "delete", payload: todoId };
+    dispatchTodo(action);
+  };
+
   return (
     <>
       <p>useReducer sample:</p>
@@ -52,7 +57,12 @@ export const TodoApp = () => {
                 <p>
                   {index + 1} - {todo.description}
                 </p>
-                <button className="btn btn-danger">Delete</button>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => handleDeleteTodo(todo.id)}
+                >
+                  Delete
+                </button>
               </li>
             ))}
           </ul>
