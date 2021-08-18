@@ -8,8 +8,6 @@ export const MultipleCustomHooks = () => {
   const { author, quote } = !!data && data[0];
   return (
     <>
-      <h2>Multiple Custom Hooks</h2>
-      <hr />
       {loading ? (
         <div className="alert alert-info text-center">Loading...</div>
       ) : (

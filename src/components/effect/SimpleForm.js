@@ -20,8 +20,6 @@ export const SimpleForm = () => {
   };
   return (
     <>
-      <h2>useEffect</h2>
-      <hr />
       <div className="form-group my-1">
         <input
           type="text"

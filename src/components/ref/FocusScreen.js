@@ -8,8 +8,6 @@ export const FocusScreen = () => {
 
   return (
     <>
-      <h2>FocusScreen</h2>
-      <hr />
       <input ref={inputRef} className="form-control" placeholder="Your name" />
       <button className="btn btn-outline-primary mt-5" onClick={handleClick}>
         Focus
