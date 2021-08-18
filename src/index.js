@@ -7,11 +7,12 @@ import "./index.css";
 //import { SimpleForm } from "./components/effect/SimpleForm";
 //import { FormWithCustomHook } from "./components/effect/FormWithCustomHook";
 //import { MultipleCustomHooks } from "./components/custom/MultipleCustomHooks";
-import { FocusScreen } from "./components/ref/FocusScreen";
+//import { FocusScreen } from "./components/ref/FocusScreen";
+import { RealExampleRef } from "./components/ref/RealExampleRef";
 
 ReactDOM.render(
   <React.StrictMode>
-    <FocusScreen />
+    <RealExampleRef />
   </React.StrictMode>,
   document.getElementById("root")
 );
