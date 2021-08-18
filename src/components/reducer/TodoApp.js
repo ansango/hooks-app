@@ -1,7 +1,7 @@
 import { useEffect, useReducer } from "react";
 import { useForm } from "../../hooks/useForm";
 import { todoReducer } from "./todoReducer";
-
+import "./TodoApp.css"
 const generateId = () => new Date().getTime().toString();
 
 const init = () => JSON.parse(localStorage.getItem("todos")) || [];
@@ -39,6 +39,11 @@ export const TodoApp = () => {
     dispatchTodo(action);
   };
 
+  const handleToggleTodo = (todoId) => {
+    const action = { type: "toggle", payload: todoId };
+    dispatchTodo(action);
+  };
+
   return (
     <>
       <p>useReducer sample:</p>
@@ -54,7 +59,10 @@ export const TodoApp = () => {
                 className="list-group-item d-flex items-center justify-content-between"
                 key={todo.id}
               >
-                <p>
+                <p
+                  className={`${todo.done && "complete"}`}
+                  onClick={() => handleToggleTodo(todo.id)}
+                >
                   {index + 1} - {todo.description}
                 </p>
                 <button
