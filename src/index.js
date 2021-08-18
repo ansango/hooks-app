@@ -4,11 +4,12 @@ import "./index.css";
 //import { HooksApp } from "./HooksApp";
 //import { CounterApp } from "./components/state/CounterApp";
 //import { CounterWithCustomHook } from "./components/state/CounterWithCustomHook";
-import { SimpleForm } from "./components/effect/SimpleForm";
+//import { SimpleForm } from "./components/effect/SimpleForm";
+import { FormWithCustomHook } from "./components/effect/FormWithCustomHook";
 
 ReactDOM.render(
   <React.StrictMode>
-    <SimpleForm />
+    <FormWithCustomHook />
   </React.StrictMode>,
   document.getElementById("root")
 );
