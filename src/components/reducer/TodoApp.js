@@ -1,12 +1,26 @@
 import { useReducer } from "react";
 import { todoReducer } from "./todoReducer";
 
-const initialState = [{ id: 1, description: "Learn React", done: false }];
+const generateId = () => new Date().getTime().toString();
+
+const initialState = [
+  {
+    id: generateId(),
+    description: "Learn React",
+    done: false,
+  },
+];
 export const TodoApp = () => {
-  const [todos] = useReducer(todoReducer, initialState);
+  const [todos, dispatchTodo] = useReducer(todoReducer, initialState);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newTodo = { id: generateId(), description: "new todo", done: false };
+    const action = {
+      type: "add",
+      payload: newTodo,
+    };
+    dispatchTodo(action);
   };
   return (
     <>
@@ -21,7 +35,7 @@ export const TodoApp = () => {
             {todos.map((todo, index) => (
               <li
                 className="list-group-item d-flex items-center justify-content-between"
-                key={index}
+                key={todo.id}
               >
                 <p>
                   {index + 1} - {todo.description}
