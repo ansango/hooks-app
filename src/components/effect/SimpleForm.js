@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Message } from "./Message";
+import { Message } from "./children/Message";
 
 export const SimpleForm = () => {
   const [formState, setFormState] = useState({ name: "", email: "" });

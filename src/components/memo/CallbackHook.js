@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { ShowIncrement } from "./ShowIncrement";
+import { ShowIncrement } from "./children/ShowIncrement";
 
 export const CallbackHook = () => {
   const [counter, setCounter] = useState(10);
