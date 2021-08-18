@@ -9,9 +9,9 @@ const components = Object.values(modules).map((module) => {
 export const HooksApp = () => {
   return (
     <div className="App">
-      <div className="p-5">
+      <Container>
         <h1>Samples Hooks</h1>
-      </div>
+      </Container>
       {components.map((module, index) => (
         <Container key={index} title={module.name}>
           <module.component></module.component>
