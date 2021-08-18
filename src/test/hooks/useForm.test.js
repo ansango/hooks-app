@@ -6,6 +6,7 @@ describe("Test useForm Hook", () => {
     name: "Anibal",
     email: "anibalsantosgo@gmail.com",
   };
+
   test("should return default values (a default form)", () => {
     const { result } = renderHook(() => useForm(initialForm));
     const [values, handleInputChange, reset] = result.current;
@@ -13,6 +14,7 @@ describe("Test useForm Hook", () => {
     expect(typeof handleInputChange).toBe("function");
     expect(typeof reset).toBe("function");
   });
+
   test("should change form value (name)", () => {
     const { result } = renderHook(() => useForm(initialForm));
     const [, handleInputChange] = result.current;
@@ -20,6 +22,7 @@ describe("Test useForm Hook", () => {
     const [values] = result.current;
     expect(values).toEqual({ ...initialForm, name: "Juan" });
   });
+
   test("should reset form", () => {
     const { result } = renderHook(() => useForm(initialForm));
     const [, , reset] = result.current;
