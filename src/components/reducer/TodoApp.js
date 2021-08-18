@@ -1,7 +1,7 @@
 import { useEffect, useReducer } from "react";
 import { useForm } from "../../hooks/useForm";
 import { todoReducer } from "./todoReducer";
-import "./TodoApp.css"
+import "./TodoApp.css";
 const generateId = () => new Date().getTime().toString();
 
 const init = () => JSON.parse(localStorage.getItem("todos")) || [];
@@ -17,7 +17,7 @@ export const TodoApp = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
-  const handleSubmit = (e) => {
+  const handleAddTodo = (e) => {
     e.preventDefault();
     if (description.trim().length !== 0) {
       const newTodo = {
@@ -78,7 +78,7 @@ export const TodoApp = () => {
         <div className="col-12 col-md-5">
           <h3> Add Todo</h3>
           <hr />
-          <form onSubmit={handleSubmit} className="py-2">
+          <form onSubmit={handleAddTodo} className="py-2">
             <input
               type="text"
               placeholder="Add a todo"
