@@ -8,7 +8,7 @@ export const HooksApp = () => {
   return (
     <div className="App">
       <Container>
-        <h1>Samples Hooks</h1>
+        <h1>Hooks Samples</h1>
       </Container>
       {components.map((module, index) => {
         const name = module[0];
