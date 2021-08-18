@@ -10,11 +10,13 @@ export const LayoutEffect = () => {
 
   const pTag = useRef();
   const [boxSize, setBoxSize] = useState({});
+
   useLayoutEffect(() => {
     const width = `${pTag.current.getBoundingClientRect().width} px`;
     const height = `${pTag.current.getBoundingClientRect().height} px`;
     setBoxSize({ width: width, height: height });
   }, [quote]);
+
   return (
     <>
       <blockquote className="blockquote d-flex">

@@ -6,4 +6,4 @@ export { MultipleCustomHooks } from "./custom/MultipleCustomHooks";
 export { FocusScreen } from "./ref/FocusScreen";
 export { RealExampleRef } from "./ref/RealExampleRef";
 export { LayoutEffect } from "./layoutEffect/LayoutEffect";
-
+export { Memorize } from "./memo/Memorize";
