@@ -6,7 +6,7 @@ export const RealExampleRef = () => {
   return (
     <>
       <button
-        className="btn btn-primary"
+        className="btn btn-primary mb-5"
         onClick={() => {
           setShow(!show);
         }}
