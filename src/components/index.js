@@ -8,3 +8,4 @@ export { RealExampleRef } from "./ref/RealExampleRef";
 export { LayoutEffect } from "./layoutEffect/LayoutEffect";
 export { Memorize } from "./memo/Memorize";
 export { MemoHook } from "./memo/MemoHook";
+export { CallbackHook } from "./memo/CallbackHook";
