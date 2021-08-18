@@ -5,13 +5,13 @@ import {
   Redirect,
 } from "react-router-dom";
 import { NavBar } from "./children/NavBar";
-import { AboutPage } from "./children/pages/AboutPage";
+import { LogoutPage } from "./children/pages/LogoutPage";
 import { HomePage } from "./children/pages/HomePage";
 import { LoginPage } from "./children/pages/LoginPage";
 
 const routes = [
   { path: "/", component: HomePage, name: "Home" },
-  { path: "/about", component: AboutPage, name: "About" },
+  { path: "/logout", component: LogoutPage, name: "Logout" },
   { path: "/login", component: LoginPage, name: "Login" },
 ];
 

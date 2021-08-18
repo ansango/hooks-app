@@ -4,7 +4,11 @@ import { Container } from "../Container";
 import { UserContext } from "../UserContext";
 
 export const HomePage = () => {
-  const userContext = useContext(UserContext);
-  log("MainApp - HomePage",userContext)
-  return <Container title="Home"></Container>;
+  const { user } = useContext(UserContext);
+  log("MainApp - HomePage", user);
+  return (
+    <Container title="Home">
+      <pre>{JSON.stringify(user, null, 3)}</pre>
+    </Container>
+  );
 };

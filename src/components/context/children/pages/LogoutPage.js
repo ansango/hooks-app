@@ -3,16 +3,14 @@ import { log } from "../../../../helpers/log";
 import { Container } from "../Container";
 import { UserContext } from "../UserContext";
 
-export const LoginPage = () => {
+export const LogoutPage = () => {
   const { user, setUser } = useContext(UserContext);
-  log("MainApp - LoginPage", { user, setUser });
+  log("MainApp - LogoutPage", { user, setUser });
   return (
-    <Container title="Login">
-      <button
-        className="btn btn-primary"
-        onClick={() => setUser({ id: 123, name: "Anibal" })}
-      >
-        Login
+    <Container title="Logout">
+      <pre>{JSON.stringify(user, null, 3)}</pre>
+      <button className="btn btn-warning" onClick={() => setUser({})}>
+        Logout
       </button>
     </Container>
   );
