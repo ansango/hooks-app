@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
+import { log } from "../../helpers/log";
 import { Message } from "./children/Message";
 
 export const SimpleForm = () => {
   const [formState, setFormState] = useState({ name: "", email: "" });
   const { name, email } = formState;
   useEffect(() => {
-    console.log("una ejecución");
+    log("SimpleForm", "First execution");
   }, []);
   useEffect(() => {
-    console.log("formState cambió a:", formState);
+    log("SimpleForm", formState);
   }, [formState]);
 
   useEffect(() => {
-    console.log("formState cambió a:", formState);
+    log("SimpleForm", formState);
   }, [email]);
 
   const handleInputChange = ({ target }) => {

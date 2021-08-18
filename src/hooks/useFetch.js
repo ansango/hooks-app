@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { log } from "../helpers/log";
 
 export const useFetch = (url) => {
   // estado
@@ -33,7 +34,7 @@ export const useFetch = (url) => {
           if (isMounted.current) {
             setState({ loading: false, error: null, data });
           } else {
-            console.log("setState no se llama");
+            log("useFetch Hook - ", "setState not called");
           }
         }, 4000)
       );

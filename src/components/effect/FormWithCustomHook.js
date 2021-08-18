@@ -1,3 +1,4 @@
+import { log } from "../../helpers/log";
 import { useForm } from "../../hooks/useForm";
 
 export const FormWithCustomHook = () => {
@@ -10,8 +11,7 @@ export const FormWithCustomHook = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log(formValues);
+    log("FormWithCustomHook", formValues);
   };
   return (
     <form onSubmit={handleSubmit}>

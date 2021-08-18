@@ -1,7 +1,8 @@
 import React from "react";
+import { log } from "../../../helpers/log";
 
 export const ShowIncrement = React.memo(({ increment }) => {
-  console.log("render");
+  log("ShowIncrement", "Render");
   return (
     <button className="btn btn-primary" onClick={() => increment(5)}>
       Incrementar

@@ -1,6 +1,9 @@
+import { log } from "./log";
+
 export const heavyProcess = (iterations) => {
   for (let i = 0; i < iterations; i++) {
-    console.log("running");
+    log("HeavyProcess Function - MemoHook", "Running");
   }
+  log("HeavyProcess Function - MemoHook", "End");
   return `${iterations} iterations done`;
 };

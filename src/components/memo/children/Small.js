@@ -1,6 +1,7 @@
 import React from "react";
+import { log } from "../../../helpers/log";
 
 export const Small = React.memo(({ value }) => {
-  console.log("render");
+  log("Small", "Render");
   return <small>{value}</small>;
 });
