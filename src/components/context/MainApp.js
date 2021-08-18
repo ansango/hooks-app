@@ -1,3 +1,3 @@
-export const MainApp = () => {
-  return <div>Context</div>;
-};
+import { AppRouter } from "./AppRouter";
+
+export const MainApp = () => <AppRouter />;
