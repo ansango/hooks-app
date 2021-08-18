@@ -11,3 +11,4 @@ export { MemoHook } from "./memo/MemoHook";
 export { CallbackHook } from "./memo/CallbackHook";
 export { MemoComponent } from "./memo/MemoComponent";
 export { TodoApp } from "./reducer/TodoApp";
+export { MainApp } from "./context/MainApp";
