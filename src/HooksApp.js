@@ -2,9 +2,7 @@ import { Container } from "./components/Container";
 
 import * as modules from "./components/";
 
-const components = Object.values(modules).map((module) => {
-  return { name: module.name, component: module };
-});
+const components = Object.entries(modules);
 
 export const HooksApp = () => {
   return (
@@ -12,11 +10,15 @@ export const HooksApp = () => {
       <Container>
         <h1>Samples Hooks</h1>
       </Container>
-      {components.map((module, index) => (
-        <Container key={index} title={module.name}>
-          <module.component></module.component>
-        </Container>
-      ))}
+      {components.map((module, index) => {
+        const name = module[0];
+        const Component = module[1];
+        return (
+          <Container key={index} title={name}>
+            <Component />
+          </Container>
+        );
+      })}
     </div>
   );
 };
