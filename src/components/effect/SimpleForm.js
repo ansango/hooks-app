@@ -19,6 +19,7 @@ export const SimpleForm = () => {
   const handleInputChange = ({ target }) => {
     setFormState({ ...formState, [target.name]: [target.value] });
   };
+
   return (
     <>
       <div className="form-group my-1">
@@ -43,7 +44,7 @@ export const SimpleForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      {name == "123" && <Message />}
+      {name[0] === "123" && <Message />}
     </>
   );
 };
