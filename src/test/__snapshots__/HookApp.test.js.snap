@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in HooksApp should render 1`] = `
+<div
+  className="App"
+>
+  <Container>
+    <h1>
+      Hooks Samples
+    </h1>
+  </Container>
+  <Container
+    key="0"
+    title="CounterApp"
+  >
+    <CounterApp />
+  </Container>
+  <Container
+    key="1"
+    title="CounterWithCustomHook"
+  >
+    <CounterWithCustomHook />
+  </Container>
+  <Container
+    key="2"
+    title="SimpleForm"
+  >
+    <SimpleForm />
+  </Container>
+  <Container
+    key="3"
+    title="FormWithCustomHook"
+  >
+    <FormWithCustomHook />
+  </Container>
+  <Container
+    key="4"
+    title="MultipleCustomHooks"
+  >
+    <MultipleCustomHooks />
+  </Container>
+  <Container
+    key="5"
+    title="FocusScreen"
+  >
+    <FocusScreen />
+  </Container>
+  <Container
+    key="6"
+    title="RealExampleRef"
+  >
+    <RealExampleRef />
+  </Container>
+  <Container
+    key="7"
+    title="LayoutEffect"
+  >
+    <LayoutEffect />
+  </Container>
+  <Container
+    key="8"
+    title="Memorize"
+  >
+    <Memorize />
+  </Container>
+  <Container
+    key="9"
+    title="MemoHook"
+  >
+    <MemoHook />
+  </Container>
+  <Container
+    key="10"
+    title="CallbackHook"
+  >
+    <CallbackHook />
+  </Container>
+  <Container
+    key="11"
+    title="MemoComponent"
+  >
+    <MemoComponent />
+  </Container>
+  <Container
+    key="12"
+    title="TodoApp"
+  >
+    <TodoApp />
+  </Container>
+  <Container
+    key="13"
+    title="MainApp"
+  >
+    <MainApp />
+  </Container>
+</div>
+`;
