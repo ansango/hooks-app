@@ -16,6 +16,7 @@ export const TodoApp = () => {
       <div className="row">
         <div className="col-12 col-md-7">
           <h3> Todos: ({todos.length})</h3>
+          <hr />
           <ul className="list-group list-group-flush">
             {todos.map((todo, index) => (
               <li
@@ -32,15 +33,16 @@ export const TodoApp = () => {
         </div>
         <div className="col-12 col-md-5">
           <h3> Add Todo</h3>
-          <form onSubmit={handleSubmit}>
+          <hr />
+          <form onSubmit={handleSubmit} className="py-2">
             <input
               type="text"
               placeholder="Add a todo"
               name="description"
               autoComplete="off"
-              className="form-control"
+              className="form-control mb-3"
             />
-            <button className="btn btn-outline-primary" type="submit">
+            <button className="btn btn-outline-primary w-100" type="submit">
               Add
             </button>
           </form>
