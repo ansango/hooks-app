@@ -29,15 +29,24 @@ export const useFetch = (url) => {
     });
     fetch(url)
       .then((resp) => resp.json())
-      .then((data) =>
-        setTimeout(() => {
+      .then(
+        (data) => {
           if (isMounted.current) {
             setState({ loading: false, error: null, data });
           } else {
             log("useFetch Hook - ", "setState not called");
           }
-        }, 4000)
-      );
+        }
+
+        // setTimeout(() => {
+        //   if (isMounted.current) {
+        //     setState({ loading: false, error: null, data });
+        //   } else {
+        //     log("useFetch Hook - ", "setState not called");
+        //   }
+        // }, 4000)
+      )
+      .catch((error) => setState({ loading: false, data: null, error: "Error fetch data" }));
   }, [url]);
 
   return state;
