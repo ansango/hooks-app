@@ -1,6 +1,5 @@
 import { useCounter } from "../../hooks/useCounterCopy";
 import { useFetch } from "../../hooks/useFetch";
-import "./MultipleCustomHooks.css";
 
 export const MultipleCustomHooks = () => {
   const { state: counter, increment } = useCounter(1);
@@ -8,8 +7,8 @@ export const MultipleCustomHooks = () => {
   const { data, loading } = useFetch(url);
   const { author, quote } = !!data && data[0];
   return (
-    <div>
-      <h1>Multiple Custom Hooks</h1>
+    <>
+      <h2>Multiple Custom Hooks</h2>
       <hr />
       {loading ? (
         <div className="alert alert-info text-center">Loading...</div>
@@ -22,6 +21,6 @@ export const MultipleCustomHooks = () => {
       <button className="btn btn-primary" onClick={increment}>
         Next Quote
       </button>
-    </div>
+    </>
   );
 };

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./CounterApp.css";
+
 export const CounterApp = () => {
   const [state, setState] = useState({
     counter1: 0,
@@ -9,9 +9,10 @@ export const CounterApp = () => {
   const { counter1, counter2 } = state;
   return (
     <>
-      <h2>Counter1 {counter1}</h2>
-      <h2>Counter2 {counter2}</h2>
+      <h2>Counter App</h2>
       <hr />
+      <h3>Counter1 {counter1}</h3>
+      <h3>Counter2 {counter2}</h3>
       <button
         className="btn btn-primary mx-1"
         onClick={() => setState({ ...state, counter1: counter1 + 1 })}

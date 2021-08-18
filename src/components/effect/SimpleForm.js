@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Message } from "./Message";
-import "./SimpleForm.css";
+
 export const SimpleForm = () => {
   const [formState, setFormState] = useState({ name: "", email: "" });
   const { name, email } = formState;
@@ -20,7 +20,7 @@ export const SimpleForm = () => {
   };
   return (
     <>
-      <h1>useEffect</h1>
+      <h2>useEffect</h2>
       <hr />
       <div className="form-group my-1">
         <input

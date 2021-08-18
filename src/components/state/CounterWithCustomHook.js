@@ -1,11 +1,12 @@
 import { useCounter } from "../../hooks/useCounter";
-import "./CounterWithCustomHook.css";
+
 export const CounterWithCustomHook = () => {
   const { state, increment, decrement, reset } = useCounter();
   return (
     <>
-      <h1>Counter with Hook: {state}</h1>
+      <h2>Counter with Custom Hook</h2>
       <hr />
+      <h3>State: {state}</h3>
       <button className="btn btn-primary mx-1" onClick={() => increment(2)}>
         +1
       </button>

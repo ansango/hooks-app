@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import "./FocusScreen.css";
 
 export const FocusScreen = () => {
   const inputRef = useRef();
@@ -8,13 +7,13 @@ export const FocusScreen = () => {
   };
 
   return (
-    <div>
-      <h1>FocusScreen</h1>
+    <>
+      <h2>FocusScreen</h2>
       <hr />
       <input ref={inputRef} className="form-control" placeholder="Your name" />
       <button className="btn btn-outline-primary mt-5" onClick={handleClick}>
         Focus
       </button>
-    </div>
+    </>
   );
 };

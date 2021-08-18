@@ -1,5 +1,4 @@
 import { useForm } from "../../hooks/useForm";
-import "./SimpleForm.css";
 
 export const FormWithCustomHook = () => {
   const [formValues, handleInputChange] = useForm({
@@ -16,7 +15,7 @@ export const FormWithCustomHook = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <h1>FormWithCustomHook</h1>
+      <h2>FormWithCustomHook</h2>
       <hr />
       <div className="form-group my-1">
         <input
