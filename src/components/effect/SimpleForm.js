@@ -17,7 +17,7 @@ export const SimpleForm = () => {
   }, [formState, email]);
 
   const handleInputChange = ({ target }) => {
-    setFormState({ ...formState, [target.name]: [target.value] });
+    setFormState({ ...formState, [target.name]: target.value });
   };
 
   return (
@@ -44,7 +44,7 @@ export const SimpleForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      {name[0] === "123" && <Message />}
+      {name === "123" && <Message />}
     </>
   );
 };

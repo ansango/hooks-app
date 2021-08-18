@@ -1,27 +1,39 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
+import { useForm } from "../../hooks/useForm";
 import { todoReducer } from "./todoReducer";
 
 const generateId = () => new Date().getTime().toString();
 
-const initialState = [
-  {
-    id: generateId(),
-    description: "Learn React",
-    done: false,
-  },
-];
+const init = () => JSON.parse(localStorage.getItem("todos")) || [];
+
 export const TodoApp = () => {
-  const [todos, dispatchTodo] = useReducer(todoReducer, initialState);
+  const [todos, dispatchTodo] = useReducer(todoReducer, [], init);
+
+  const [{ description }, handleInputChange, reset] = useForm({
+    description: "",
+  });
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newTodo = { id: generateId(), description: "new todo", done: false };
-    const action = {
-      type: "add",
-      payload: newTodo,
-    };
-    dispatchTodo(action);
+    if (description.trim().length !== 0) {
+      const newTodo = {
+        id: generateId(),
+        description: description,
+        done: false,
+      };
+      const action = {
+        type: "add",
+        payload: newTodo,
+      };
+      dispatchTodo(action);
+      reset();
+    }
   };
+
   return (
     <>
       <p>useReducer sample:</p>
@@ -55,6 +67,8 @@ export const TodoApp = () => {
               name="description"
               autoComplete="off"
               className="form-control mb-3"
+              value={description}
+              onChange={handleInputChange}
             />
             <button className="btn btn-outline-primary w-100" type="submit">
               Add
