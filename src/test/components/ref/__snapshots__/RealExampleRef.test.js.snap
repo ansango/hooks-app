@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <RealExampleRef/> should render 1`] = `
+<Fragment>
+  <button
+    className="btn btn-primary mb-5"
+    onClick={[Function]}
+  >
+    Show/Hide
+  </button>
+</Fragment>
+`;
