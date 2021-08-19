@@ -4,36 +4,36 @@ describe("Test useCounter Hook", () => {
   test("should return default values", () => {
     const { result } = renderHook(() => useCounter());
 
-    expect(result.current.state).toBe(10);
+    expect(result.current.counter).toBe(10);
     expect(typeof result.current.increment).toBe("function");
     expect(typeof result.current.decrement).toBe("function");
     expect(typeof result.current.reset).toBe("function");
   });
 
-  test("should return state in 100", () => {
+  test("should return counter in 100", () => {
     const { result } = renderHook(() => useCounter(100));
-    expect(result.current.state).toBe(100);
+    expect(result.current.counter).toBe(100);
   });
 
-  test("should increment state in 1", () => {
+  test("should increment counter in 1", () => {
     const { result } = renderHook(() => useCounter(100));
     const { increment } = result.current;
     act(() => increment());
-    const { state } = result.current;
-    expect(state).toBe(101);
+    const { counter } = result.current;
+    expect(counter).toBe(101);
   });
-  test("should decrement state in 1", () => {
+  test("should decrement counter in 1", () => {
     const { result } = renderHook(() => useCounter(100));
     const { decrement } = result.current;
     act(() => decrement());
-    const { state } = result.current;
-    expect(state).toBe(99);
+    const { counter } = result.current;
+    expect(counter).toBe(99);
   });
-  test("should reset state", () => {
+  test("should reset counter", () => {
     const { result } = renderHook(() => useCounter(100));
     const { reset } = result.current;
     act(() => reset());
-    const { state } = result.current;
-    expect(state).toBe(100);
+    const { counter } = result.current;
+    expect(counter).toBe(100);
   });
 });

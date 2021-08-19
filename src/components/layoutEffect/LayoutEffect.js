@@ -1,9 +1,9 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import { useCounter } from "../../hooks/useCounterCopy";
+import { useCounter } from "../../hooks/useCounter";
 import { useFetch } from "../../hooks/useFetch";
 
 export const LayoutEffect = () => {
-  const { state: counter, increment } = useCounter(1);
+  const { counter, increment } = useCounter(1);
   const url = `https://www.breakingbadapi.com/api/quotes/${counter}`;
   const { data } = useFetch(url);
   const { quote } = !!data && data[0];

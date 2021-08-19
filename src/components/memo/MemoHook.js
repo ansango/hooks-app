@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
 import { heavyProcess } from "../../helpers/heavyProcess";
-import { useCounter } from "../../hooks/useCounterCopy";
+import { useCounter } from "../../hooks/useCounter";
 
 export const MemoHook = () => {
-  const { state: counter, increment } = useCounter(5000);
+  const { counter, increment } = useCounter(5000);
   const [show, setShow] = useState(true);
 
   const memoHeavyProcess = useMemo(() => heavyProcess(counter), [counter]);

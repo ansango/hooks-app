@@ -1,8 +1,8 @@
-import { useCounter } from "../../hooks/useCounterCopy";
+import { useCounter } from "../../hooks/useCounter";
 import { useFetch } from "../../hooks/useFetch";
 
 export const MultipleCustomHooks = () => {
-  const { state: counter, increment } = useCounter(1);
+  const { counter, increment } = useCounter(1);
   const url = `https://www.breakingbadapi.com/api/quotes/${counter}`;
   const { data, loading } = useFetch(url);
   const { author, quote } = !!data && data[0];

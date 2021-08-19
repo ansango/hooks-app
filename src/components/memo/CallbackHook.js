@@ -15,7 +15,7 @@ export const CallbackHook = () => {
 
   return (
     <>
-      <h3>Counter :{counter}</h3>
+      <h3>Counter: {counter}</h3>
       <ShowIncrement increment={increment} />
     </>
   );
