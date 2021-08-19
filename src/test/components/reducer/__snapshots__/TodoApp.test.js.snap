@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <TodoApp/> should render 1`] = `
+<Fragment>
+  <p>
+    useReducer sample:
+  </p>
+  <br />
+  <div
+    className="row"
+  >
+    <div
+      className="col-12 col-md-7"
+    >
+      <h3
+        className="title"
+      >
+        Todos: (
+        0
+        )
+      </h3>
+      <hr />
+      <TodoList
+        handleDeleteTodo={[Function]}
+        handleToggleTodo={[Function]}
+        todos={Array []}
+      />
+    </div>
+    <div
+      className="col-12 col-md-5"
+    >
+      <TodoAdd
+        handleAddTodo={[Function]}
+      />
+    </div>
+  </div>
+</Fragment>
+`;

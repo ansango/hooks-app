@@ -28,7 +28,7 @@ export const TodoApp = () => {
 
       <div className="row">
         <div className="col-12 col-md-7">
-          <h3> Todos: ({todos.length})</h3>
+          <h3 className="title">Todos: ({todos.length})</h3>
           <hr />
           <TodoList
             todos={todos}
