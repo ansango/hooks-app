@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <LoginPage/> should render 1`] = `
+<div
+  className="base-container py-5 bg-light"
+>
+  <h3
+    className="text-center"
+  >
+    Login
+  </h3>
+  <div
+    className="d-flex flex-column align-items-center justify-content-center p-5"
+  >
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+    >
+      Login
+    </button>
+  </div>
+</div>
+`;

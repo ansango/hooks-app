@@ -1,4 +1,4 @@
-import { mount, shallow } from "enzyme";
+import { mount } from "enzyme";
 import { HomePage } from "../../../components/context/children/pages/HomePage";
 import { UserContext } from "../../../components/context/children/UserContext";
 
