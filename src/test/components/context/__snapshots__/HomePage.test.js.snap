@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <HomePage/> should render 1`] = `
+<div
+  className="base-container py-5 bg-light"
+>
+  <h3
+    className="text-center"
+  >
+    Home
+  </h3>
+  <div
+    className="d-flex flex-column align-items-center justify-content-center p-5"
+  >
+    <pre>
+      {
+   "name": "Anibal",
+   "email": "anibalsantosgo@gmail.com"
+}
+    </pre>
+  </div>
+</div>
+`;
