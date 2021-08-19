@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <AppRouter/> should render 1`] = `
+Array [
+  <nav
+    className="navbar navbar-light bg-light d-flex flex-row justify-content-end"
+  >
+    <div
+      className="navbar-nav"
+    >
+      <div
+        className="d-flex"
+      >
+        <a
+          aria-current="page"
+          className="nav-item nav-link mx-3 active"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Home
+        </a>
+        <a
+          aria-current={null}
+          className="nav-item nav-link mx-3"
+          href="/logout"
+          onClick={[Function]}
+        >
+          Logout
+        </a>
+        <a
+          aria-current={null}
+          className="nav-item nav-link mx-3"
+          href="/login"
+          onClick={[Function]}
+        >
+          Login
+        </a>
+      </div>
+    </div>
+  </nav>,
+  <div
+    className="base-container py-5 bg-light"
+  >
+    <h3
+      className="text-center"
+    >
+      Home
+    </h3>
+    <div
+      className="d-flex flex-column align-items-center justify-content-center p-5"
+    >
+      <pre>
+        {
+   "id": 123,
+   "name": "Anibal"
+}
+      </pre>
+    </div>
+  </div>,
+]
+`;
